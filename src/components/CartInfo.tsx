@@ -1,11 +1,7 @@
 import { useSelector } from 'react-redux'
-
-// Este es un tipo que vamos a necesitar, ahora te explico
 import type { RootState } from '../app/store'
 
 export function CartInfo() {
-  // Usamos useSelector para leer datos del store.
-  // Le decimos que queremos la longitud del array 'items' del estado 'cart'.
   const itemCount = useSelector((state: RootState) => state.cart.items.length)
   const totalPrice = useSelector((state: RootState) => state.cart.totalPrice)
 
