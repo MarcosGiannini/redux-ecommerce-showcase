@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { addItem } from './features/cart/cartSlice'
-import { CartInfo } from './components/CartInfo' // 1. Importamos el componente
+import { CartInfo } from './components/CartInfo'
 
 function App() {
   const dispatch = useDispatch()
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen p-8">
-      <CartInfo /> {/* 2. Lo usamos aquí */}
+      <CartInfo />
       <h1 className="text-3xl font-bold my-4 text-center">Mi Tienda de Pizzas</h1>
       <div className="bg-gray-800 p-4 rounded-lg max-w-sm mx-auto">
         <h2 className="text-xl">{productToAdd.name}</h2>

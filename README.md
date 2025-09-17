@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+# 🛒 Redux E-commerce Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Una aplicación de carrito de la compra limpia y moderna construida para demostrar el manejo avanzado de estado global en React utilizando Redux Toolkit y TypeScript.
 
-Currently, two official plugins are available:
+![GIF de la aplicación en funcionamiento](URL_DEL_GIF_AQUI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Demo en Vivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Puedes probar la aplicación desplegada aquí: [**Enlace a la Demo en Vercel**](URL_DE_VERCEL_AQUI)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologías Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **React** - Librería para la interfaz de usuario.
+* **TypeScript** - Para un código robusto y tipado.
+* **Redux Toolkit** - Para una gestión de estado predecible y eficiente.
+* **React-Redux** - Para conectar Redux con los componentes de React.
+* **Vite** - Herramienta de desarrollo y empaquetado ultra-rápida.
+* **Tailwind CSS** - Para un diseño moderno y utility-first.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Características Principales
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Estado Global Centralizado:** Toda la lógica del carrito (items, precio total) se maneja en el Store de Redux.
+* **Dispatch de Acciones:** Interacción del usuario (clic en "Añadir al Carrito") que despacha acciones para mutar el estado.
+* **Selección de Estado en Tiempo Real:** Los componentes de la UI se suscriben al estado con `useSelector` y se re-renderizan automáticamente cuando los datos cambian.
+* **Tipado de Extremo a Extremo:** Seguridad de tipos desde las acciones de Redux hasta las props de los componentes de React.
+
+---
+
+## ⚙️ Cómo Ejecutar el Proyecto en Local
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/MarcosGiannini/redux-ecommerce-showcase.git](https://github.com/MarcosGiannini/redux-ecommerce-showcase.git)
+    ```
+2.  **Navega al directorio del proyecto:**
+    ```bash
+    cd redux-ecommerce-showcase
+    ```
+3.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+4.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+5.  Abre [http://localhost:5173](http://localhost:5173) en tu navegador para ver la aplicación.
